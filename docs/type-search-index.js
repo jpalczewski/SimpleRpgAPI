@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"pl.uwm.edu.wmii.po.rpg.Items","l":"IItem"},{"p":"pl.uwm.edu.wmii.po.rpg.Items","l":"Item"},{"p":"pl.uwm.edu.wmii.po.rpg","l":"Main"}]
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"pl.uwm.edu.wmii.po.rpg.Items","l":"IItem"},{"p":"pl.uwm.edu.wmii.po.rpg.Items","l":"Item"},{"p":"pl.uwm.edu.wmii.po.rpg.Traits","l":"ITrait"},{"p":"pl.uwm.edu.wmii.po.rpg","l":"Main"},{"p":"pl.uwm.edu.wmii.po.rpg.Traits","l":"Strength"},{"p":"pl.uwm.edu.wmii.po.rpg.Traits","l":"Trait"}]
