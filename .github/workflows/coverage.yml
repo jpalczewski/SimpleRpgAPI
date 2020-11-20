@@ -33,3 +33,8 @@ jobs:
         # The report file must be there, otherwise Code Climate won't find it
         coverageCommand: mvn test
         coverageLocations: ${{github.workspace}}/target/site/jacoco/jacoco.xml:jacoco
+    - name: Run codacy-coverage-reporter
+      uses: codacy/codacy-coverage-reporter-action@master
+      with:
+          project-token: ${{ secrets.CODACY_TOKEN }}
+          coverage-reports: ${{github.workspace}}/target/site/jacoco/jacoco.xml
