@@ -6,6 +6,5 @@ import pl.uwm.edu.wmii.po.rpg.Exceptions.ImpossibleActionException;
  */
 public interface IItem {
      String getDescription();
-     boolean isUpgradeable();
-     void upgrade() throws ImpossibleActionException;
+
 }

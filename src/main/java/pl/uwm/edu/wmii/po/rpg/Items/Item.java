@@ -1,13 +1,16 @@
 package pl.uwm.edu.wmii.po.rpg.Items;
 
 import pl.uwm.edu.wmii.po.rpg.Exceptions.ImpossibleActionException;
-import pl.uwm.edu.wmii.po.rpg.Items.IItem;
+import pl.uwm.edu.wmii.po.rpg.Items.Upgrades.IUpgradeStrategy;
+import pl.uwm.edu.wmii.po.rpg.Items.Upgrades.IUpgradeable;
+import pl.uwm.edu.wmii.po.rpg.Items.Upgrades.UpgradesDisabledStrategy;
+
 /**
     Abstract class describing most basic item behaviour.
  */
-public abstract class Item implements IItem {
+public abstract class Item implements IItem, IUpgradeable {
     private String description;
-    private final IUpgradeStrategy upgradeStrategy;
+    protected IUpgradeStrategy upgradeStrategy;
 
     public Item() {
         upgradeStrategy = new UpgradesDisabledStrategy();
