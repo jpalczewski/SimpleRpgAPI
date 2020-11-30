@@ -18,7 +18,10 @@ public class IntegerTraitSet extends TraitSet<Integer> {
     /**
      * Tests set given any conditions(f.e. provided by an item)
      */
-    boolean checkCondition(Predicate<IntegerTraitSet> predicate) {
+    public boolean checkCondition(Predicate<IntegerTraitSet> predicate) {
         return predicate.test(this);
+    }
+    public void upgradeIfExists(TraitType type) {
+        getTrait(type).ifPresent(integerTrait -> ((IntegerTrait) integerTrait).incrementValue());
     }
 }

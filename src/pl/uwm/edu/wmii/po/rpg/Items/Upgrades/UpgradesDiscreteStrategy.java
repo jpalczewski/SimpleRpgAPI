@@ -10,6 +10,7 @@ public class UpgradesDiscreteStrategy implements IUpgradeStrategy {
 
     @Override
     public void upgrade(IUpgradeable upgradeable) throws ImpossibleActionException {
-        upgradeable.upgrade();
+        if(upgradeable instanceof  IDiscreteUpgradeable)
+            ((IDiscreteUpgradeable) upgradeable).discreteUpgrade();
     }
 }

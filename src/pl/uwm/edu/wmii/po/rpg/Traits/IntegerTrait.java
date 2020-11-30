@@ -25,5 +25,9 @@ abstract  public class IntegerTrait extends Trait<Integer>{
     public static Integer getMaximalValue() {
         return maximalValue;
     }
+    public void incrementValue() {
+        if(value<maximalValue)
+            value  = value+1;
+    }
 
 }
