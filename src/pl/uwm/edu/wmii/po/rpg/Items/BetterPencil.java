@@ -6,6 +6,7 @@ import pl.uwm.edu.wmii.po.rpg.Items.Upgrades.UpgradesDiscreteStrategy;
 import pl.uwm.edu.wmii.po.rpg.Traits.IntegerTraitSet;
 import pl.uwm.edu.wmii.po.rpg.Traits.RequirementFactory;
 import pl.uwm.edu.wmii.po.rpg.Traits.TraitType;
+import pl.uwm.edu.wmii.po.rpg.command.AttackCommand;
 
 import java.util.function.Predicate;
 
@@ -27,8 +28,8 @@ public class BetterPencil extends Item implements IUpgradeable {
 
     @Override
     public Predicate<IntegerTraitSet> getItemRequirements() {
-        return RequirementFactory.createRequirement(TraitType.STRENGTH, 5).and(
-                RequirementFactory.createRequirement(TraitType.AGILITY, 2)
+        return RequirementFactory.createRequirement(TraitType.STRENGTH, 7).and(
+                RequirementFactory.createRequirement(TraitType.AGILITY, 3)
         );
     }
 
@@ -45,5 +46,12 @@ public class BetterPencil extends Item implements IUpgradeable {
             return;
         }
         throw  new ImpossibleActionException("You have upgraded this pencil once!");
+    }
+
+    @Override
+    public AttackCommand parse(AttackCommand attackCommand) {
+        float multiplier = 1.2f;
+        attackCommand.multiplyBaseValue(multiplier);
+        return attackCommand;
     }
 }
